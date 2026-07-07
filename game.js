@@ -1,3 +1,4 @@
+// this will get the choice from the computer
 function getComputerChoice(no) {
     num = Math.floor(Math.random()*no);
 
@@ -10,8 +11,8 @@ function getComputerChoice(no) {
             return 'scissors'
     }
 }
-// this will get the choice from the computer
 
+// this will take input from the human and return it 
 function getHumanChoice() {
     choice = prompt('please enter your choice!!');
     lowercaseChoice = choice.toLowerCase();
@@ -19,7 +20,6 @@ function getHumanChoice() {
 
     return lowercaseChoice
 }
-// this will take input from the human and return it 
 
 function playGame() {
     let humanScore = 0;
@@ -50,12 +50,6 @@ function playGame() {
             console.log('you both chose the same thing! try again!')
         }
     }
-
-    playRound(getHumanChoice(), getComputerChoice(3));
-    playRound(getHumanChoice(), getComputerChoice(3));
-    playRound(getHumanChoice(), getComputerChoice(3));
-    playRound(getHumanChoice(), getComputerChoice(3));
-    playRound(getHumanChoice(), getComputerChoice(3));
 }
 
 playGame();
